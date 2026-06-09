@@ -1,0 +1,18 @@
+{
+  "name": "health-prediction-application",
+  "version": "1.0.0",
+  "description": "AI-powered Health Prediction Application with patient blood test analysis",
+  "private": true,
+  "scripts": {
+    "install:backend": "cd backend && pip install -r requirements.txt",
+    "install:frontend": "cd frontend && npm install",
+    "install:all": "npm run install:backend && npm run install:frontend",
+    "start:backend": "cd backend && venv\\Scripts\\python app.py",
+    "start:frontend": "cd frontend && npm start",
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "build": "cd frontend && npm run build",
+    "setup": "cd backend && python -m venv venv && npm run install:all"
+  },
+  "keywords": ["health", "prediction", "ai", "flask", "react"],
+  "license": "MIT"
+}
